@@ -1,0 +1,33 @@
+package solution;
+
+import java.util.ArrayList;
+
+public class backTracking {
+	public static ArrayList<Integer> BackTracking(ArrayList<Integer> list, ArrayList<Integer> result, int index) {
+		int len_list = list.size();
+		if (index == len_list-2) {
+			result.add(list.get(index)*list.get(len_list-1)));
+		}
+		else {
+			for(int i=index+1;i<len_list;++i) {
+				result.add(list.get(index)*list.get(i));
+			}
+			ArrayList<Integer> back_list = BackTracking(list, result, index+1);
+			result.addAll(back_list);
+			return result;
+		}
+	}
+	public static void main(String[] args) {\
+		
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		
+		int len = list.size();
+		for (int i=0;i<len;++i) {
+			System.out.println(list.get(i));
+		}
+		
+	}
+}

@@ -1,0 +1,24 @@
+package solution;
+
+import solution.backTracking;
+import solution.theSecondLargest;
+
+import java.util.ArrayList;
+
+public class main {
+	public static void main(String[] args) {
+			
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			list.add(2);
+			list.add(3);
+			list.add(5);
+			
+			theSecondLargest findFactor = new theSecondLargest();
+			backTracking method = new backTracking();
+			
+			ArrayList<Integer> listDistinctMultiple = method.listMultipleResult(list);
+			
+			System.out.println("The distict value of multiple element to each other: "+ listDistinctMultiple.toString());
+			System.out.println("The factor of the value are: "+findFactor.getFactor(6, list).toString());
+	}
+}

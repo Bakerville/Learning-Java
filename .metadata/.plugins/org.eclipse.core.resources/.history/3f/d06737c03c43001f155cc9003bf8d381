@@ -1,0 +1,23 @@
+package solution;
+
+import solution.backTracking;
+
+import java.util.ArrayList;
+
+public class main {
+	public static void main(String[] args) {
+			
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			list.add(2);
+			list.add(3);
+			list.add(4);
+			
+			backTracking method = new backTracking();
+			
+			ArrayList<Integer> listDistinctMultiple = method.listMultipleResult(list);
+			
+			for (int i=0;i<listDistinctMultiple.size();++i) {
+				System.out.println(listDistinctMultiple.get(i));
+			}
+		}
+}
